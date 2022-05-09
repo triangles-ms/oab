@@ -1,0 +1,216 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* CSS Variables */
+:root {
+    --header-height: 3rem;
+
+    /* Colors */
+    --first-color: #bb2e3a;
+    --first-color-alt: #C42130;
+    --first-color-send: #DE3B49;
+    --title-color: #161212;
+    --text-color: #5B5757;
+    --text-color-light: #8F8A8A;
+    --body-color: #FEFBFB;
+    --container-color: #FFF;
+
+    /* Font and typography */
+    --body-font: 'Poppins', sans-serif;
+    --biggest-font-size: 2rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+}
+
+@media screen and (min-width: 968px) {
+    :root {
+        --biggest-font-size: 3rem;
+        --h2-font-size: 1.75rem;
+        --h3-font-size: 1.25rem;
+        --normal-font-size: 1rem;
+        --small-font-size: .875rem;
+    }
+}
+
+/* Base Declarations */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+ul {
+    padding: 0;
+    list-style-type: circle;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Reusable CSS Classes */
+.section {
+    padding: 4rem 0 2rem;
+}
+
+.container {
+    max-width: 968px;
+    width: calc(100% - 3rem);
+    margin-left: var(--mb-3);
+    margin-right: var(--mb-3);
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Header Section */
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+}
+
+/* Nav Section */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+.nav-logo {
+    font-family: var(--body-font);
+    font-size: 1.5rem;
+    color: var(--first-color);
+}
+
+.logo {
+    width: 3rem;
+}
+
+.lang {
+    font-size: var(--normal-font-size);
+    color: var(--first-color);
+    font-family: var(--body-font);
+}
+
+/* Main Body */
+.main {
+    overflow: hidden;
+}
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.home-img,
+.back-img {
+    width: 340px;
+    align-self: center;
+}
+
+/* Buttons */
+.button {
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    background-color: var(--first-color);
+    font-family: var(--body-font);
+    color: #fff;
+    padding: 1rem 2rem;
+    font-weight: var(--font-semi-bold);
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+}
+
+.button:hover {
+    background-color: var(--first-color-alt);
+}
+
+.back {
+    font-size: 1.25rem;
+    color: var(--first-color);
+}
+
+/* Contract Page */
+.contract {
+    display: flex;
+}
+
+.contract-img {
+    width: 340px;
+    margin: auto;
+    margin-top: 1.5rem;
+    height: 380px;
+}
+
+/* Muscles Page */
+.muscles-item .img-description {
+    text-align: center;
+    margin-top: 0.8rem;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+/* Ex-1 Page */
+.exercise-description {
+    font-family: var(--body-font);
+    list-style: disc;
+    width: 320px;
+    padding: 1.3rem;
+    margin-top: 1.5rem;
+    border-top: 2px solid var(--first-color);
+}
+
+.exercise-description li {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.exercise-description:last-child {
+    margin-bottom: 0;
+}
